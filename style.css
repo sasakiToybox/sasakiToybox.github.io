@@ -1,0 +1,114 @@
+*{
+  color:blue;
+  /*background-color: fuchsia;*/
+}
+
+li{
+  list-style: none;
+}
+
+
+.menu{
+  display: block;
+  float: right;
+  margin: 10px 10px;
+  position: relative;
+} 
+
+.menu1{
+  float: left;
+  margin: 10px 10px;
+  position: relative;
+}
+
+.menu2{
+  float: left;
+  margin: 10px 10px;
+  position: relative;
+}
+
+.menu3{
+  float: left;
+  margin: 10px 10px;
+  position: relative;
+}
+.menu4{
+  float: left;
+  margin: 10px 10px;
+  position: relative;
+}
+
+
+.about{
+  display: block;
+  text-align:center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+} 
+.about p{
+    position:absolute;
+    
+}
+
+.box{
+  background-color: cadetblue;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 200px;
+}
+
+.new{
+  color:red;
+  float: left;
+}
+/* 点滅 */
+/*ここからコピペ*/
+.blinking{
+    -webkit-animation:blink 1.5s ease-in-out infinite alternate;
+    -moz-animation:blink 1.5s ease-in-out infinite alternate;
+    animation:blink 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+@-moz-keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+}
+@keyframes blink{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+/*ここまでコピペ*/
+
+.rirekisyo{
+  text-align:center;
+  position: relative;
+}
+
+.rirekisyo p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  ms-transform: translate(-50%,-50%);
+  webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+.rirekisyo img{
+  width: 800px;
+}
+
+
+footer{
+  color: gray;
+  text-align:center;
+}
