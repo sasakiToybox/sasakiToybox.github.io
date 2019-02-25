@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<!DOCTYPE PHP>
+<html lang="ja">
+<head>
+ <meta charset="utf-8">
+ <title>私のウェブ履歴書</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!--メール用-->
+  <script type="text/javascript" charset="UTF-8"></script>
+  <!--メール用終わり-->
+</head>
+
+<body>
+  <header>myportforio
+    <ul class="menu">
+      <li class="menu1">ホーム</li>
+      <li class="menu2">アバウト</li>
+      <li class="menu3">コンテンツ</li>
+      <li class="menu4">e-mail</li>
+    </ul>
+  </header>
+  <div class="rirekisyo"><img src="PAK86_penwomotutetonote20140312_TP_V.jpg" alt="履歴書">
+    <p>ここは管理人の人生の履歴書サイトです<br>ITでの就職を目指して作成したものをまとめています</p></div>
+  
+  <!--こっからコピペ-->
+
+  <!--ここまでコピペ-->
+  <div class="contents">
+    <ul>
+      <li>
+        <div class="gakureki box">学歴・職歴</div>
+        <table border width="800">
+        <tr align="center">
+          <td>2004年</td>
+          <td>大迫町立大迫中学校　卒業（現　花巻市立大迫中学校）</td>
+        </tr>
+        <tr align="center">
+          <td>2004年</td>
+          <td>岩手県立大迫高校　入学</td>
+        </tr>
+        <tr align="center">
+         <td>2004年</td>
+         <td>岩手県立大迫高校　中退</td>
+        </tr>
+        <tr align="center">
+         <td></td>
+         <td>実家が農家だったので稼業の手伝いを主にする</td>
+        </tr>
+        <tr align="center">
+          <td>2004年</td>
+          <td>就職支援にてパソコンを学び、インターネットに興味を持つ</td>
+        </tr>
+        <tr align="center">
+          <td>2019年</td>
+          <td>独学、サイトでの学習を経て自らのサイトを立ち上げる</td>
+        </tr>
+        </table>
+      </li>
+      <li><div class="seisakubutu box">今までに作ったもの</div>
+      <span class="new blinking">new</span><p>このサイト</p>
+      <p>javascliptにて鋭意作成中</p></li>
+      <li><div class="sns box">SNS</div>
+        <ul class="follow-me">
+    <li><a href="https://twitter.com/MUuCPqvhxBmYqDk"></a><li>
+    <li><a href="https://www.facebook.com/hogehoge"></li>
+    <li><a href="https:/plus.google.com/hogehoge"></a></li>
+</ul></li>
+    </ul>
+    <div class="e-mail">e-mall<br>
+      <!-- メールフォーム -->
+　<form action="./mail.php" method="post">
+ <p>受信者</p><input type="text" name="to">
+ <p>タイトル</p><input type="text" name="title">
+ <p>本文</p><textarea name="content" cols="50" rows="5"></textarea>
+ <p><input type="submit" name="send" value="送信"></p>
+ </form>
+      <!-- メール　PHP -->
+　<?php
+ mb_language("Japanese");
+ mb_internal_encoding("UTF-8");
+ 
+ $to = $_POST['to'];
+ $title = $_POST['title'];
+ $content = $_POST['content'];
+ 
+ if(mb_send_mail($to, $title, $content)){
+ echo "メールを送信しました";
+ } else {
+ echo "メールの送信に失敗しました";
+ }
+ ?>
+      <!-- メール　PHP終わり -->
+      <!-- メールフォーム終わり -->
+    </div>
+  </div>
+  <footer>2019 sasaki kaori</footer>
+</body>
+
+
+</html>
+
